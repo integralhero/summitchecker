@@ -1,0 +1,12 @@
+<% if @result %>
+<%= @result.code %>
+<% else %>
+	<% if params[:code] %>
+		Sorry, the code you entered was incorrect!
+	<% end %>
+<form method="GET">
+	<input name="code" type="text" placeholder="Enter your code...">
+	<input type="submit">
+</form>
+
+<% end %>

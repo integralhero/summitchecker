@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @delegate.status %>
+</p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @delegate.full_name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @delegate.code %>
+</p>
+<%= link_to 'Edit', edit_delegate_path(@delegate) %> |
+<%= link_to 'Back', delegates_path %>

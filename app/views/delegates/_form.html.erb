@@ -1,0 +1,29 @@
+<%= form_for(@delegate) do |f| %>
+  <% if @delegate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@delegate.errors.count, "error") %> prohibited this delegate from being saved:</h2>
+
+      <ul>
+      <% @delegate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :full_name %><br>
+    <%= f.text_field :full_name %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
