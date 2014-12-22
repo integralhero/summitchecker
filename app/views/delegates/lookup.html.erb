@@ -1,5 +1,14 @@
 <% if @result %>
-<%= @result.code %>
+<% case @result.status %>
+<% when 0 %>
+    Your application is being reviewed.
+<% when 1 %>
+    Congratulations! We have decided to move your application forward. Please choose an interview time that works for you.
+<% when 2 %>
+    Accepted
+<% else %>
+    Rejected
+<% end %>
 <% else %>
 	<% if params[:code] %>
 		Sorry, the code you entered was incorrect!
