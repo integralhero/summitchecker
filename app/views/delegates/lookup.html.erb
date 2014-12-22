@@ -1,13 +1,25 @@
 <% if @result %>
 <% case @result.status %>
 <% when 0 %>
-    Your application is being reviewed.
+    <div class="message jumbotron">
+        <h1>Hello, <%= @result.full_name %>!</h1>
+        <p>Your application is being reviewed.</p>
+    </div>
 <% when 1 %>
-    Congratulations! We have decided to move your application forward. Please choose an interview time that works for you.
+    <div class="message jumbotron">
+        <h1>Hello, <%= @result.full_name %>!</h1>
+        <p>Congratulations! We have decided to move your application forward. Please choose an interview time that works for you.</p>
+    </div>
 <% when 2 %>
-    Accepted
+    <div class="message jumbotron">
+        <h1>Congratulations, <%= @result.full_name %>!</h1>
+        <p>You have been accepted to ASES Summit 2015.</p>
+    </div>
 <% else %>
-    Rejected
+    <div class="message jumbotron">
+        <h1>Hello, <%= @result.full_name %>,</h1>
+        <p>Unfortunately, we were unable to accept you this year.</p>
+    </div>
 <% end %>
 <% else %>
 	<% if params[:code] %>
