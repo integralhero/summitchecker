@@ -13,9 +13,17 @@
 	<% if params[:code] %>
 		Sorry, the code you entered was incorrect!
 	<% end %>
-<form method="GET">
-	<input name="code" type="text" placeholder="Enter your code...">
-	<input type="submit">
-</form>
+  <div class="wrapper">
+    <form class="form-signin">       
+      <h2 class="login" class="form-signin-heading">Please login</h2>
+      <input type="text" class="input" class="form-control" name="code" placeholder="Enter your code..." required="" autofocus="" />
+      <button class="submit" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>   
+    </form>
+  </div>
+
+                <!--<form id="code" method="GET">-->
+<!--                    <input name="code" type="text" placeholder="Enter your code...">
+                    <input type="submit">
+                </form>-->
 
 <% end %>
